@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form2</title>
+    <style>
+        form{
+            border: 2px solid black;
+            width: 400px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        button{
+            color: turquoise;
+            background-color: blueviolet;
+        }
+        fieldset{
+            width: 80%;
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form action=""method="get">
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label for="name">First Name</label>
+             <input type="text" placeholder="Enter your first name" id="fname"  name="fname">
+             <BR></BR>
+             <label for="mname">Middle Name</label>
+             <input type="text" placeholder="Enter your Middle name" id="mname"  name="mname">
+             <BR></BR>
+
+             <label for="lname">Last Name</label>
+              <input type="text" placeholder="Enter your last name" id="lname" name="lname">
+              <br><br>
+              <label for="age">Age</label>
+              <input type="number"  name="age" id="age" min="10" max="45">
+              <br><br>
+ 
+
+              <label for="gender">Gender</label>
+              <input type="radio" name="gender" id="male" value="male">
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="female" value="female">
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="others" value="others">
+              <label for="others">Others</label>
+              <br><br>
+
+
+              <label for="dob">DOB</label>
+              <input type="date" name="dob" id="dob">
+              <br><br>
+
+
+              <label for="image">Upload File</label>
+              <input type="file" name="image" id="image" accept="image/*">
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Favorites</legend>
+
+             <label for="color">Favorite Color</label>
+             <input type="checkbox" name="red" id="red">
+             <label for="red">Red</label>
+             <input type="checkbox" name="green" id="green">
+             <label for="green">Green</label>
+             <input type="checkbox" name="yellow" id="yellow">
+             <label for="yellow">Yellow</label>
+             <br><br>
+
+
+             <label for="item">Favorite FoodItem</label>
+             <select name="item" id="item" >
+                <option value="">Select food</option>
+                <optgroup label="Tiffins">
+                <option value="Idly">Idly</option>
+                <option value="dosa">Dosa</option>
+               </optgroup>
+        
+               <optgroup label="non-veg">
+                <option value="biriyani">Biriyani</option>
+                <option value="firedrice">Fired Rice</option>
+               </optgroup>
+             </select>
+            <br><br>
+
+
+            <label for="subject">Favorite Subjects</label>
+            <select name="subject" id="subject" multiple sixe="2">
+                <option value="english">English</option>
+                <option value="maths">Maths</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+            </select>
+            <br><br>
+
+
+            <label for="game">Favorite Game</label>
+            <input  name="game" id="game" list="games">
+            <datalist id="games">
+                <option value="circket"></option>
+                <option value="football"></option>
+                <option value="hockey"></option>
+            </datalist>
+        </fieldset>
+
+
+        <br><br>
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="email">Email </label>
+            <input type="email" placeholder="Enter your email" id="email" name="email">
+            <br><br>
+
+
+            <label for="tel">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="enter 10 didgit nunmber" pattern="[0-9]{10}">
+            <br><br>
+
+
+            <label for="pwd">Password</label>
+            <input type="password" name="pwd" id="pwd" required>
+            <br><br>
+
+
+            <label for="address">Address</label>
+            <textarea name="address" id="address"></textarea>
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+         <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
