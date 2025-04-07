@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Layout Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #f27121, #8e44ad);
+      font-family: Arial, sans-serif;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .flex-row-container {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      padding: 80px 0;
+    }
+
+    .flex-box {
+      width: 140px;
+      height: 140px;
+      border: 2px solid black;
+      background: linear-gradient(to bottom right, orange, gold);
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .box {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(to bottom right, blue, cyan);
+      color: black;
+      font-size: 12px;
+      text-align: center;
+      line-height: 40px;
+      margin: 2px;
+      border: 1px solid black;
+    }
+
+    /* Updated Flexbox Behaviors for Second Row */
+    .jc-flex-start {
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .jc-flex-end {
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .jc-center {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .jc-space-between {
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ First Row: Basic Flexbox Boxes -->
+  <div class="flex-container">
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+  </div>
+
+  <!-- ✅ Second Row: Demonstrating justify-content and align-items variations -->
+  <div class="flex-row-container">
+    <div class="flex-box jc-flex-start">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-flex-end">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-center">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+    <div class="flex-box jc-space-between">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+    </div>
+  </div>
+
+</body>
+</html>

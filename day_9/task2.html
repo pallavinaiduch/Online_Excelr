@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        .container{
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas:"header     header"
+                                "content     sec1"
+                                " content    sec2 "
+                                "foot       foot ";
+        
+            
+        }
+        .child{
+            font-size: 40px;
+            text-align: center;
+            align-content: center;
+            margin: 5px;
+            border-radius: 20px;
+        }
+         /* color
+        1.rgb -red green blue
+        2.hel -hexadecimal it indicates with #
+        3.hsl -it indicates with hsl(color, saturation, lightness)
+        4.rgba -red green blue alpha(opacity) */
+        .header{
+            background-color: red;
+           
+              grid-area: header;       
+        }
+        .content{
+            background-color: blue;
+            grid-area: content;
+        }
+        .sec1{
+            background-color: green;
+            
+            grid-area: sec1;
+        }
+        .sec2{
+            background-color: yellow;
+           
+            grid-area: sec2;
+        }
+        .foot{
+            background-color: brown;
+            
+            grid-area:foot ;
+        }
+    </style>
+    
+    </head>
+    <body>
+        <div class="container">
+        <div class="child header" >Header</div>
+        <div class="child content">Content</div>
+        <div class="child sec1">Section 1</div>
+        <div class="child sec2">Section 2</div>
+        <div class="child foot">Footer</div>
+        
+    
+    </div>
+    
+    </body>
+    </html>

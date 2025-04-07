@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Loops, Conditions & Operators</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h2 {
+      color: #333;
+    }
+    .output {
+      white-space: pre-line;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Output:</h2>
+<div class="output" id="outputArea"></div>
+
+<script>
+  const output = document.getElementById("outputArea");
+
+  function print(msg) {
+    output.innerHTML += msg + "\n";
+  }
+
+  // Comparison and if-else
+  let num1 = 10;
+  let num2 = 5;
+
+  if (num1 > num2) {
+    print("Num1 is greater");
+  } else {
+    print("Num2 is greater");
+  }
+
+  // While loop
+  let i = 1;
+  while (i <= 5) {
+    print("While loop iteration " + i);
+    i++;
+  }
+
+  // For loop
+  for (let j = 1; j <= 5; j++) {
+    print("For loop iteration " + j);
+  }
+
+  // Do-while loop
+  let k = 1;
+  do {
+    print("Do-While loop iteration " + k);
+    k++;
+  } while (k <= 5);
+
+  // Switch statement
+  let day = 1;
+  switch (day) {
+    case 1:
+      print("It's Monday");
+      break;
+    case 2:
+      print("It's Tuesday");
+      break;
+    case 3:
+      print("It's Wednesday");
+      break;
+    default:
+      print("Other day");
+  }
+</script>
+
+</body>
+</html>
