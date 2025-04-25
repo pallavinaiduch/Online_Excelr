@@ -29,8 +29,18 @@
     <div id="container4" class="highlight">checking the highlight</div>
     <button onclick="check()">check highlight</button>
 
+    <div id="box" class="highlight">this is a div box</div>
+
     <script>
-        let container4=document.getElementById("container4");
+        let box=document.getElementById("box");
+        let style=getComputedStyle(box);
+        console.log(style.backgroundColor);
+        console.log(style.padding);
+        console.log(style.height);
+
+
+
+        let container4 = document.getElementById("container4");
         function check(){
             if(container4.classList.contains('highlight')){
                 alert("highlight present");
