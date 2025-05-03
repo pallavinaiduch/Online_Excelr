@@ -9,6 +9,7 @@ import InputDisplay from './InputDisplay.jsx'
 import Parent from './ParentChild.jsx'
 import FetchData from './FetchData.jsx'
 import TodoList from './TodoList.jsx'
+import ColorSelector from './ColorSelector.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
     <Parent />
     <FetchData />
     <TodoList />
+    <ColorSelector />
     
   </StrictMode>,
 )
