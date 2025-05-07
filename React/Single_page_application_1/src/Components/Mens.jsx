@@ -1,9 +1,11 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
-export default function Mens() {
+const Mens = () => {
+    let {type}= useParams();
   return (
-    <div>
-      
-    </div>
+    <div>Mens ... loading ....{type}</div>
   )
 }
+
+export default Mens

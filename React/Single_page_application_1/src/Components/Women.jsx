@@ -1,9 +1,11 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
-export default function Women() {
+const Womens = () => {
+  let{type,color} = useParams();
   return (
-    <div>
-      
-    </div>
+    <div>Womens...{type}...{color}</div>
   )
 }
+
+export default Womens

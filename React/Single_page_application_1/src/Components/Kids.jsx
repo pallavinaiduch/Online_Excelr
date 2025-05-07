@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalAuthContext } from './GlobalAuthContext'
 
-export default function Kids() {
+const Kids = () => {
+    let {user}=useContext(GlobalAuthContext);
   return (
-    <div>
-      
-    </div>
+    <div>Kids {user.username}</div>
   )
 }
+
+export default Kids
