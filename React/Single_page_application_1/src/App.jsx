@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import "./App.css";
-import Login from "./components/Login";
-import Dashboard from "./components/Dashboard";
-import Error from "./components/Error";
-import Mens from "./components/Mens";
-import Womens from "./components/Womens";
-import Kids from "./components/Kids";
+import Login from "./Components/Login";
+import Dashboard from "./Components/Dashboard";
+import Error from "./Components/Error";
+import Mens from "./Components/Mens";
+import Womens from "./Components/Women";
+import Kids from "./Components/Kids";
 function App() {
   return (
     <>
