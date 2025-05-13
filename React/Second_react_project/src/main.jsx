@@ -1,4 +1,3 @@
-
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -23,9 +22,11 @@ import InlineStyle from './Styles/InlineStyle.jsx'
 import ExternalStyle from './Styles/ExternalStyle.jsx'
 import BootStrapTask1 from './Styles/BootStrapTask1.jsx'
 import BootstrapTask2 from './Styles/BootstrapTask2.jsx'
-import Eventtask2 from './Events/Eventtask2.jsx'
+import EventTask2 from './Events/EventTask2.jsx'
 import Controlled from './components/Controlled.jsx'
 import UnControlled from './components/UnControlled.jsx'
+import UseReducerExample from './states/UseReducerExample.jsx'
+import Custom1 from './states/Custom1.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -47,8 +48,10 @@ createRoot(document.getElementById('root')).render(
    {/* <ExternalStyle/> */}
    {/* <BootStrapTask1/> */}
    {/* <BootstrapTask2/> */}
-   {/* <Eventtask2/> */}
+   {/* <EventTask2/> */}
    {/* <Controlled/> */}
-   <UnControlled/>
+   {/* <UnControlled/> */}
+   {/* <UseReducerExample/> */}
+   <Custom1/>
   </StrictMode>,
 )
