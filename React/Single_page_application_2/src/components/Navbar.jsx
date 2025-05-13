@@ -1,3 +1,4 @@
+
 import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -5,7 +6,8 @@ const Navbar = () => {
   let search = useRef("");
   let navigate = useNavigate();
 
-  let searchFunc = () => {
+  // eslint-disable-next-line no-unused-vars
+  let searchFunc = (e) => {
     // e.preventDefault();
     //  console.log(search.current.value);
     navigate("/search/" + search.current.value);
@@ -26,6 +28,14 @@ const Navbar = () => {
           <Link to="/updateProduct">
             <button className="btn btn-outline-primary">UpdateProduct</button>
           </Link>
+
+          
+          <Link to="/saveProduct">
+            <button className="btn btn-outline-primary">saveProduct</button>
+          </Link>
+
+
+
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
