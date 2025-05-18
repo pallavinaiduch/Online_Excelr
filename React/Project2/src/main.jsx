@@ -20,6 +20,11 @@ import GrandChilds from './Contexts/GrandChild.jsx'
 import MessageContext from './Contexts/MessageContext.jsx'
 import Parent1 from './Contexts/Parent.jsx'
 import Control from './Control/ControlUncontrol.jsx'
+import TimerApp from './SatTasks/TimerApp.jsx'
+import Todotask from './SatTasks/Todotask.jsx'
+import ColorChange from './SatTasks/ColorChange.jsx'
+import Clock from './SatTasks/SetInterval.jsx'
+import PasswordInput from './SatTasks/Password.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -42,6 +47,11 @@ createRoot(document.getElementById('root')).render(
     <MessageContext/>
     <Parent1/>
     <Control/>
+    <TimerApp/>
+    <Todotask/>
+    <ColorChange/>
+    <Clock/>
+    <PasswordInput/>
     
   </StrictMode>,
 )
