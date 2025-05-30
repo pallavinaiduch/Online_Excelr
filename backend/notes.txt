@@ -539,3 +539,70 @@ String methods:
                                 if first string is less than second string then it will return -1,
                                 if first string is greater than second string then it will return 1
                              
+
+limitations of String :
+           - Strings are immutable in java , so  if we modify (add,delete,replace)
+             a string then a new string will be created and the old string will be
+             garbage collected
+          - so, we use string builder and string buffer to modify a string
+ 
+------------------------------------------------------------------------------------
+                  String             StringBuffer               StringBuilder
+    -------------------------------------------------------------------------------
+mutability       immutable           mutable                    mutable
+thread safe      not applicable      applicable                 not applicable
+performance      slow                fast                       fast
+use case         general purpose     multi-thread              single-thread 
+
+----------------------------------------------------------------------------------
+Methods in StringBuffer and StringBuilder:
+          -both are classes present in java.lang package
+          -they are used to modify a string
+          -they are thread safe (StringBuffer) and (StringBuilder) are not thread safe
+ 
+ 1.append(): used to add a character or a string at the end of a string
+ 2.insert(): used to insert a character or a string at a particular index position
+        syntax:
+        sb.insert(index,character);
+        sb.insert(index,string);
+ 3.replace(): used to replace a character or a string at a particular index position
+        syntax:
+        sb.replace(start,end,character);
+        sb.replace(start,end,string);
+4.delete(): used to delete a character or a string at a particular index position
+        syntax:
+        sb.delete(start,end);
+5.deleteCharAt(): used to delete a character at a particular index position
+        syntax:
+        sb.deleteCharAt(index);
+6.reverse(): used to reverse a string
+        syntax:
+        sb.reverse();
+7.length(): used to get the length of a string
+        syntax:
+        sb.length();
+8.setLength(): used to set the length of a string
+        syntax:
+        sb.setLength(length);
+9.substring(): used to get a substring/part of a string
+        syntax:
+        sb.substring(start,end);
+10.toString(): used to convert a string to a string buffer
+        syntax:
+        sb.toString();
+11.charAt(): used to get the character at a particular index position
+        syntax:
+        sb.charAt(index);
+12.setCharAt(): used to set the character at a particular index position
+        syntax:
+        sb.setCharAt(index,character);
+12.indexOf(): used to get the first index of a character in a string
+        syntax:
+        sb.indexOf(character);
+13.lastIndexOf(): used to get the last index of a character in a string
+15.capacity(): used to get the capacity of a string buffer
+        syntax:
+        sb.capacity();
+16.ensureCapacity(): used to ensure the capacity of a string buffer
+        syntax:
+        sb.ensureCapacity(capacity);    
