@@ -606,3 +606,104 @@ Methods in StringBuffer and StringBuilder:
 16.ensureCapacity(): used to ensure the capacity of a string buffer
         syntax:
         sb.ensureCapacity(capacity);    
+
+------------------------------------------------------------------------------------------
+Methods :
+      - it is a block of code that performs a specific task
+      - methods should be enclosed in {}
+      - methods should be declared inside a class or interface or abstract class
+      - methods can invoke/call with the help of method name or method signature
+      - used to reuse the code, increases the reusability, readability of the code
+
+Note : without calling a method ,it will not run
+     : calling method is called method invocation/ method calling statement 
+
+syntax: 
+access modifier  specifier return_type method_name(parameters){
+    
+    ----
+    ----
+    return statement;
+}
+
+method signature: methodName+ parameters/arguments
+method declaration: access modifier+specifier+return_type+method_name+parameters
+method definition: method declaration+body
+
+
+Methods are two types based on arguments:
+----------------------------------------
+1. no-argument methods/zero-argument methods/non parameterized methods
+                ex:
+                public static void m1() {
+                    
+                }
+                m1();//method invocation
+2. argument methods/parameterized methods
+                ex:
+                public static void m1(int a) {
+                    
+                }
+                m1(10);//method invocation
+    
+    -----------------------------------------------------------------------------
+     actual arguments                                formal arguments
+    ------------------------------------------------------------------------------
+parameters passed to a method                        parameters declared in a method
+value/literal/expression                             datatype variableName
+    ------------------------------------------------------------------------------
+
+
+
+Method Overloading:
+++++++++++++++++++
+ - multiple methods with same name but different parameters or formal arguments in same class or interface
+is called method overloading
+ - method overloading is used to increase the reusability of code
+
+ Note : number of parameters should be different
+        datatype of parameters should be different
+        order of parameters should be different
+---------------------------------------------------------------------------------------
+
+Class:
+++++++
+    - class is a blue print of an object or a real world entity
+    - class is used to create objects
+    - it consist of variables and methods
+    - it is a collection of related data and functions
+    - class is created by using class keyword
+    - class is a non primitive data type
+
+ex: Bike:  
+     action/method/function :riding(), start(), stop()
+     variable/properties/data :name, color, price
+    
+Object :
+        - object is a real world entity
+        - object is created by using new keyword and class constructor;
+        - object is created in heap memory
+    
+    syntax : 
+    class ClassName{
+        //variables and methods
+    }
+
+    ClassName obj=new ClassName();
+
+Note : static members can call by using Class name
+       Non static members can call by using object reference variable
+
+
+Encapsulation:
+++++++++++++++++
+- it is a process of wrapping/binding the data(variables) and methods
+  into a single unit is called encapsulation
+- hiding the internal state of an object from the outside world(by using access modifiers-private)
+- providing access with the help of getter and setter methods
+
+Note : getter and setter methods are used to access private variables
+       getter are used to get/access/retrieve the value of private variable
+       setter are used to set/assign/write the value of private variable
+       -
+    
