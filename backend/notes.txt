@@ -654,6 +654,23 @@ value/literal/expression                             datatype variableName
     ------------------------------------------------------------------------------
 
 
+Methods are two types based on return type:
+--------------------------------------------
+1.void methods/non returned methods
+      - method does not return any value to the caller
+      - return type is void
+      - return statement is not mandatory(optional)
+2.non void methods/returned methods
+      - method returns a value/data to the caller
+      - return type is not void(primitive or non primitive)
+      - return statement is mandatory
+
+Note : return is a keyword 
+       return statement is used to return a value/data to the caller
+       return statement is used to terminate a method
+       return statement must be the last statement in a method
+       more than one return statement is not allowed in a method
+
 
 Method Overloading:
 ++++++++++++++++++
@@ -695,15 +712,78 @@ Note : static members can call by using Class name
        Non static members can call by using object reference variable
 
 
+OOPS (Object Oriented Programming):
++++++++++++++++++++++++++++++++++
+      1.Encapsulation
+      2.Abstraction
+      3.Inheritance
+      4.Polymorphism
+
 Encapsulation:
 ++++++++++++++++
 - it is a process of wrapping/binding the data(variables) and methods
   into a single unit is called encapsulation
+- we can achieve data hiding and data security
 - hiding the internal state of an object from the outside world(by using access modifiers-private)
 - providing access with the help of getter and setter methods
 
 Note : getter and setter methods are used to access private variables
        getter are used to get/access/retrieve the value of private variable
        setter are used to set/assign/write the value of private variable
-       -
-    
+
+-----------------------------------------------------------------------------
+Abstraction:
+++++++++++++
+       -The process of hiding implementation  and showing only the
+        functionality to the user is called abstraction
+       - we can achieve abstraction by using abstract classes and interfaces
+
+abstract class:
+--------------
+        - class can be declared as abstract by using abstract keyword
+        - abstract class cannot be instantiated/can't create object ,
+          because it is abstract/incomplete
+        - we can have (abstract methods , concrete methods)non static and static methods
+        - we can have (abstract variables, concrete variables)non static and static variables
+        - we can have constructor for reinitialization of non static variables
+
+
+
+Inheritance:
++++++++++++
+       -The process of inheriting properties and methods from a parent class
+       to a child class is called inheritance
+       -we can achieve inheritance by using extends and implements keyword
+            class A{
+            //parent 
+            }
+
+            class B extends A{
+            //child
+            }
+
+ extends: is a keyword used to achieve inheritance in java 
+          Child class--(extends)----->Parent class
+          Child class----(extends)--->abstract Parent class
+          abstract Child class----(extends)--->Parent class  
+
+implements : is a keyword used to achieve inheritance in java
+            class ---(implements)------>interface
+            interface----(extends)------>interface
+
+
+ parent             interface                     class/abstract class
+                        |                                 |
+                        | (achievable by implements)      |(cant achieve  )
+ child           class/abstarct class                 interface
+
+
+       Types:
+            1.single level inheritance:
+                - a class can inherit properties and methods from only
+                  one parent class to a child class
+            2.multilevel inheritance
+                - a class can inherit properties and methods from more than one parent class
+            3.hierarchical inheritance
+            4.multiple inheritance
+            5.hybrid inheritance
