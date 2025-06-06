@@ -744,8 +744,38 @@ abstract class:
         - abstract class cannot be instantiated/can't create object ,
           because it is abstract/incomplete
         - we can have (abstract methods , concrete methods)non static and static methods
-        - we can have (abstract variables, concrete variables)non static and static variables
-        - we can have constructor for reinitialization of non static variables
+        - we can have non static and static variables
+        - we can have constructor for reinitialization of non static variables,
+          not for object creation
+        - static and final methods cant be abstract methods
+
+interface:
+-----------
+     - interface can be create with interface keyword
+     - to achieve multiple inheritance and 100% abstraction
+     - it will allows only abstract methods and constants
+       (public static final data member) until java 8
+     - it wont allow constructor because all the data members
+       are static and final by default
+     - from java 8 , it allows static method and default methods
+
+
+Non primitive typecasting:
++++++++++++++++++++++++++
+       -converting one non primitive data type to another non primitive data type
+       -there are two types of casting:
+            1.implicit casting : 
+                   - it is done automatically by the compiler
+                   - converting child data type to parent data type
+                   - can also called as widening typecasting(upcasting)
+            2.explicit casting : it is done manually by the programmer
+                  - it is done manually by the developer need to use cast operator ()
+                  - converting parent data type to child data type
+                  - can also called as narrowing typecasting(downcasting)
+
+
+
+
 
 
 
@@ -783,7 +813,173 @@ implements : is a keyword used to achieve inheritance in java
                 - a class can inherit properties and methods from only
                   one parent class to a child class
             2.multilevel inheritance
-                - a class can inherit properties and methods from more than one parent class
+                - a class can inherit properties and methods from more
+                  than one parent class
             3.hierarchical inheritance
-            4.multiple inheritance
+                 - a class can inherit properties and methods from one parent
+                   to multiple child classes
+            4.multiple inheritance 
+                - a child  inheriting properties and methods from more than one parent
+                - multiple inheritance is not allowed in java by using class
+                - it can be achieved by using interfaces
+
+Diamond Problem/Ambiguity Problem:
+++++++++++++++++++++++++++++++++++
+     when we try to perform multiple inheritance in java using class, child class
+     try to call parent class constructor and try to  override parental method
+     which causes ambiguity problem and diamond problem  
+
             5.hybrid inheritance
+                - hybrid inheritance is a combination of multiple
+                  and hierarchical inheritance
+---------------------------------------------------------------------------
+constructor:
+++++++++++++
+           - constructor is a special method
+           - constructor is used to create the object/instance
+           - constructor is called automatically when an object is created
+           - constructor is used to assign values to non static variables
+           - constructor name should be same as class name
+           - constructor doesn't have return type
+    Types:
+          1.default constructor
+                         - no arguments constructor created by java compiler by default
+          2.user defined constructor
+                         - constructor created by user/developer/programmer
+                         1.parameterized constructor/argument constructor
+                         2.non-argument constructor/non- parameterized constructor
+
+Note : if we create an user defined constructor then default constructor 
+       will not be created by java compiler
+
+
+constructor overloading:
++++++++++++++++++++++++
+            -having multiple constructors with different parameters(formal arguments)
+             in same class is  called constructor overloading
+
+rules:
+      1. constructor name should be same as class name
+      2. different number of parameters
+      3. different type of parameters
+      4. different order of parameters
+
+constructor chaining:
+++++++++++++++++++++
+           - the process of calling one constructor from another constructor
+             is called constructor chaining
+           - used to assign values to non static variables from another constructor
+           - helps to avoid duplicate code(code duplication)
+           - can achieve with the help of this() and super() statements
+           -this() - this call statement is used to call current constructor
+           -super() - super call statement is used to call parent class constructor
+
+Note : 1.this() or super () must be the first statement in a constructor
+       2.both statements can't be used together in a constructor
+    
+method overriding:
+++++++++++++++++++
+            - The process of changing the implementation of a parent class method
+              in a child class
+            - overriding is used to achieve run time polymorphism
+            - inheritance is mandatory for method overriding
+Note :
+     method signature should be same in parent class and child class
+     method return type should be same in parent class and child class
+     **final methods can't be overridden
+
+---------------------------------------------------------------------------------------
+method overloading                                        method overriding
+-----------------------------------------------------------------------------------
+multiple methods with same name                          changing the implementation
+ but different parameters                                of parent class method
+
+inheritance is not mandatory                             inheritance is mandatory
+
+compile time binding                                      run time binding
+-----------------------------------------------------------------------------------
+Object class
+++++++++++++
+         - Object class is an inbuilt class present in java.lang package from 1.0 version
+         - Object class is a parent/super/base/root class of all classes
+         - it consist 11 methods
+methods:
+-------
+1. toString()->returns a string representation of the object
+             - to print object values rather than object address/reference
+2. hashCode()->returns a hash code value for the object
+3. equals()->returns true if the specified object is equal to this object
+4. getClass()->returns the class of the object
+5. clone()->returns a copy of the object
+6. finalize()->called when the object is no longer reachable
+7. notify()->wakes up a single thread that is waiting on this object's monitor
+8. notifyAll()->wakes up all threads that are waiting on this object's monitor
+9. wait()->causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object
+10. wait(long timeout)->causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or the specified amount of time has elapsed
+11. wait(long timeout, int nanos)->causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or the specified amount of time has elapsed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Polymorphism:(many/ multiple forms)
+++++++++++++
+    -the process of having many forms is called polymorphism
+    -it is used to achieve run time polymorphism and compile
+     time polymorphism
+    Run time polymorphism:
+    ---------------------
+               - method overriding
+    Compile time polymorphism:
+    -------------------------
+               - method overloading
+               - constructor overloading
+-------------------------------------------------------------------------------------------------------------------
+
+final :
+------
+    - it is a keyword
+    - final dataMember /variable /field can't be changed/re assigned
+      need to initialize during declaration
+    - final method can't be abstract and can't be overridden
+    - final class can't be abstract and can't be inherited
+     
+
+
+
+
+
+
+
+Online Course management/platform:
+++++++++++++++++++++++++++++++++
+    
+blueprint/class:  1.User class
+                  2.Student class
+                  3.Faculty class
+                  4.Course class etc
+Encapsulation: binding data and method  together in a class
+    ex: class User{
+        private int userId;
+        private String userName;
+        private String password;
+        //getter and setter methods
+    } 
+
+Abstraction and Inheritance :
+              we can make User class as abstract class,
+              Student and Faculty as child classes of User class 
+              for providing implementation
+
+Polymorphism : attending class by teacher and student
+          abstract  class User{   
+            attendingClass(); 
+          }  
+
+          class Student extends User{
+            takingClasses(){
+                system.out.println("Student attending classes");
+            }
+          }
+
+          class Faculty extends User{
+            teachingClasses(){
+                system.out.println("Faculty teaching classes");
+            }
+          }
